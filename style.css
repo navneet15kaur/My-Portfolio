@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    height: 150%;
+}
 .head{
     width: 100%;
     height: 100vh;
@@ -12,14 +15,7 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
 }
-nav{
-    width: 84%;
-    margin:auto;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 .logo{
     width: 150px;
     cursor: pointer;
@@ -54,9 +50,7 @@ nav ul li a:hover{
     font-size: 20px;
     color: black;
     text-decoration: none;
-    margin-left: 100px;
-    margin-right: -70px;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 .social a:hover{
@@ -121,9 +115,48 @@ nav ul li a:hover{
 .heading h2{
     font-size:50px;
     color:red;
+    margin-left:600px;
 }
-.about-internship{
-    align-items:right;
+.cusimg{
+    width:100%;
+}
+.abtimg{
+    width:100%;
+}
+#about{
+    min-height:350px;
+}
+.resumetimg{
+    width:50%
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+@media screen and (max-width: 600px)
+{
+    .resumetimg{
+        width:100%
+    }
+    nav ul li{
+        width:100%;
+    }
+}
+.about-img .abtimg{
+    padding-bottom: 20%;
+    padding-left: 100px;
+    max-width: 500px;
+    height: auto;
+    width: 90%;
+    border-radius: 8px;
+    margin-left:-40px;
+    margin-top: 100px;
+}
+.about .about-text{
+    margin-left:850px;
+    margin-top: -450px;
+    color: black;
+    font-size:20px;
 }
 .projects{
     width: 100%;
@@ -135,18 +168,31 @@ nav ul li a:hover{
 .heading2 h2{
     font-size:50px;
     color:red;
+    margin-left: 600px;
+    margin-top: -200px;
 }
-.heading2 span{
+.heading2 h3{
     font-size:20px;
     color: black;
+    margin-left:40px;
+    margin-top: 50px;
 }
 .projects .pro-img{
     height:70%;
     position:absolute;
     left:50%;
     bottom:10%;
+    margin-top:30px;
+    margin-left:290px;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
+}
+.projects .pro-text{
+    margin-left:50px;
+    margin-top: 10px;
+    font-size:-40px;
+    color: black;
+    font-size:20px;
 }
 .resume{
     width: 100%;
@@ -155,7 +201,14 @@ nav ul li a:hover{
     font-family: 'Poppins', sans-serif;
     position: relative;
 }
-
+.resume .reimg{
+    margin-left:400px;
+}
+.resume .myresume h3{
+    font-size:40px;
+    color:navy;
+    margin-left: 650px;
+}
 .contact{
     width: 100%;
     height: 100vh;
@@ -234,7 +287,7 @@ nav ul li a:hover{
     position:relative;
     margin-left:900px;
     margin-right:90px;
-    margin-bottom:90px;
+    margin-bottom:120px;
     margin-top:-330px;
 }
 .contact-form form input.form textarea{
@@ -261,10 +314,119 @@ nav ul li a:hover{
     color:white;
     display: inline-block;
     border: 1px solid transparent;
-    transition: all 0.4s ease;
 }
 .contact-form form .send:hover{
     background:transparent;
     color:black;
     border: 1px solid black;
+}
+
+/*
+@media screen and (max-width: 600px)
+{
+    .head{
+        width: 60%;
+        height: 50vh;
+    }
+    nav{
+        width: 30%;
+    }
+    .logo{
+        width: 60px;
+        cursor: pointer;
+    }
+    .social a{
+        height: 20px;
+    }
+    .info h1{
+        font-size:20px;
+    }
+    .info p{
+        line-height: 10px;
+    }
+    .image{
+        width:20%;
+        height: 36%;
+        right:40px;
+    }
+    .image .img{
+        height:40%;
+        position:auto;
+        left:20%;
+        bottom:3%;
+    }
+    .about{
+        width: 45%;
+        height: 49vh;
+    }
+    .heading h2{
+        font-size:20px;
+    }
+    .about-img .abtimg{
+        max-width: 200px;
+        height: auto;
+        width: 40;
+    }
+    .about .about-text{
+        font-size:8px;
+    }
+    .projects{
+        width: 50%;
+        height: 49vh;
+    }
+    .heading2 h2{
+        font-size:20px;
+    }
+    .heading2 h3{
+        font-size:8px;
+    }
+    .projects .pro-img{
+        height:30%;
+    }
+    .projects .pro-text{
+        font-size:-18px;
+        font-size:8px;
+    }
+    .resume{
+        width: 49%;
+        height: 30%;
+    }
+    .resume .myresume h3{
+        font-size:18px;
+    }
+    .contact{
+        width: 48%;
+        height: 50vh;
+    }
+    .contact-text h2{
+        font-size: 38px;
+        line-height: 1;
+        
+    }
+    .contact-text h4{
+        font-size: 8px;
+        font-weight:250;
+    }
+    .contact-text p{
+        font-size: 9px;
+        line-height: 15px;
+    }
+    .contact list i{
+        font-size:9px;
+        font-weight:250;
+    
+    }
+    .contact-icons i{
+        width: 18px;
+        height: 18px;
+        font-size: 9px;
+    }
+    .contact-form form input.form textarea{
+        width: 40%;
+        font-size:0.5rem;
+        font-weight: 250;
+    }
+    .contact-form textarea{
+        height:90px;
+    }
 }
